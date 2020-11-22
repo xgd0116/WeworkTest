@@ -1,0 +1,28 @@
+Normal_User:
+  data:
+    -
+      userid: "test0001"
+      name: "测试0001"
+      mobile: 13800000001
+      department: [1]
+      errcode: 0
+      errmsg: "created"
+
+Repetition_UserId:
+  data:
+    -
+      userid: "test0001"
+      name: "重复测试id"
+      mobile: 13800000002
+      department: [1]
+      errcode: 60102
+      errmsg: "userid existed"
+Repetition_Mobile:
+  data:
+    -
+      userid: "test005"
+      name: "重复手机号"
+      mobile: 13800000001
+      department: [1]
+      errcode: 60104
+      errmsg: "mobile existed:test0001"
