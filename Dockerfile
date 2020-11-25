@@ -12,7 +12,5 @@ ADD . .
 # 安装所需的包
 RUN pip install -r requirements.txt
 
-RUN rm -rf allure_results/*
-
 # 执行
-CMD ["pytest", "testcase/test_user.py", "-v", "--alluredir", "allure-results"]
+CMD ["pytest", "testcase/test_user.py", "--alluredir", "allure-results"]
