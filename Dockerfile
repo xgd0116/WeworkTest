@@ -10,7 +10,9 @@ WORKDIR .
 ADD . .
 
 # 安装所需的包
-CMD pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+RUN pip install -r requirements.txt
+
+RUN rm -rf allure_results/*
 
 # 执行
-CMD ["pytest", "-q", "--alluredir","allure-results"]
+CMD ["pytest", "testcase/test_user.py", "-v", "--alluredir", "allure-results"]
